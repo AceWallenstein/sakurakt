@@ -1,11 +1,9 @@
 package com.blankspace.sakura.login
 
-import android.widget.Button
 import androidx.activity.viewModels
 import com.blankspace.sakura.R
 import com.blankspace.sakura.base.BaseActivity
 import com.blankspace.sakura.databinding.ActivityLoginBinding
-import com.blankspace.sakura.databinding.ActivityMainBinding
 import com.blankspace.sakura.ext.onClick
 
 class LoginActivity : BaseActivity<ActivityLoginBinding>() {
@@ -23,6 +21,8 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>() {
                 when (it.id) {
                     R.id.button -> {
                         vm.login("1", "123")
+
+
                     }
                 }
             }

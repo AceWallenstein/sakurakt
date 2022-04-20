@@ -1,9 +1,8 @@
-package com.blankspace.sakura.utils
+package com.blankspace.sakura.common.utils
 
 import android.content.Context
 import android.widget.Toast
 import androidx.annotation.StringRes
-import com.blankspace.sakura.App
 
 fun Context.toast(content: String, duration: Int = Toast.LENGTH_SHORT) {
     Toast.makeText(this, content, duration).apply {

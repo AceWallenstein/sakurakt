@@ -4,10 +4,9 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.blankspace.sakura.App
 import com.blankspace.sakura.R
+import com.blankspace.sakura.common.utils.toast
 import com.blankspace.sakura.net.ApiException
 import com.blankspace.sakura.net.MoshiHelper
-import com.blankspace.sakura.net.RetrofitClient
-import com.blankspace.sakura.utils.toast
 import com.squareup.moshi.JsonDataException
 import com.squareup.moshi.JsonEncodingException
 import kotlinx.coroutines.CancellationException

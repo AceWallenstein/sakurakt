@@ -2,6 +2,7 @@ package com.blankspace.sakura
 
 import android.app.Application
 
+
 class App : Application() {
     companion object{
         @JvmStatic
@@ -11,5 +12,8 @@ class App : Application() {
     override fun onCreate() {
         super.onCreate()
         instance = this
+
     }
+
+
 }
