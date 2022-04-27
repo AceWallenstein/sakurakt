@@ -35,6 +35,7 @@ abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity() {
     public open fun loadingDialog(){
         val testDialog =  newGenjiDialog {
             //只需要将unLeak属性设置为true
+//            layoutId = R.layout.dialog_mask
             unLeak = true
         }.showOnWindow(supportFragmentManager)
 

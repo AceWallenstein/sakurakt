@@ -3,6 +3,7 @@ package com.blankspace.sakura.common.utils
 import android.content.Context
 import android.widget.Toast
 import androidx.annotation.StringRes
+import com.blankspace.sakura.App
 
 fun Context.toast(content: String, duration: Int = Toast.LENGTH_SHORT) {
     Toast.makeText(this, content, duration).apply {
@@ -22,7 +23,7 @@ fun Context.longToast(@StringRes id: Int) {
     toast(id, Toast.LENGTH_LONG)
 }
 
-fun Any.toast(context: Context, content: String, duration: Int = Toast.LENGTH_SHORT) {
+fun Any.toast(context: Context = App.instance, content: String, duration: Int = Toast.LENGTH_SHORT) {
     context.toast(content, duration)
 }
 
