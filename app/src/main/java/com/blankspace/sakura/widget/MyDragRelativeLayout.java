@@ -118,9 +118,9 @@ public class MyDragRelativeLayout extends RelativeLayout {
     }
 
     public void saveState() {
-        mainActivity.mLeft = mLeft;
-        mainActivity.mTop = mTop;
-        mainActivity.isFirst = isFirst;
+        mainActivity.setMLeft(mLeft);
+        mainActivity.setMTop(mTop);
+        mainActivity.setFirst(isFirst);
     }
 
     @Override
@@ -131,9 +131,9 @@ public class MyDragRelativeLayout extends RelativeLayout {
     }
 
     public void restoreState() {
-        this.mLeft = mainActivity.mLeft;
-        this.mTop = mainActivity.mTop;
-        this.isFirst = mainActivity.isFirst;
+        this.mLeft = mainActivity.getMLeft();
+        this.mTop = mainActivity.getMTop();
+        this.isFirst = mainActivity.isFirst();
     }
 
     @Override

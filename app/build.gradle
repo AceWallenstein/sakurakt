@@ -77,6 +77,9 @@ dependencies {
 //    implementation "androidx.datastore:datastore-preferences:$data_store_version"
 
 
+    implementation 'com.github.q876625596:GenjiDialogV2:1.4.1'
+
+
 
 
 }

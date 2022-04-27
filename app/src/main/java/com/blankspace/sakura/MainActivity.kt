@@ -11,6 +11,7 @@ import com.blankspace.sakura.common.utils.NavigationUtil
 import com.blankspace.sakura.databinding.ActivityMainBinding
 import com.blankspace.sakura.ext.onClick
 import com.blankspace.sakura.ext.textColor
+import com.blankspace.sakura.form.FormFragment
 import com.blankspace.sakura.home.HomeFragment
 
 
@@ -38,6 +39,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     //    EasyNavigationBar navigationBar;
     public var mLeft = 0
     public var mTop = 0
+    public var isFirst = false
 
 
     private lateinit var tabAdapter: FragmentTabAdapter
@@ -53,8 +55,8 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
     private fun initFragments() {
         fragments.add(HomeFragment())
-        fragments.add(HomeFragment())
-        fragments.add(HomeFragment())
+        fragments.add(FormFragment())
+        fragments.add(FormFragment())
         fragments.add(HomeFragment())
 //        fragments.plus(ClassFragment())
 //        fragments.plus(FormFragment())

@@ -4,6 +4,7 @@ import android.content.Context
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewbinding.ViewBinding
+import com.ly.genjidialog.extensions.newGenjiDialog
 
 abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity() {
     protected lateinit var mContext: Context
@@ -31,5 +32,13 @@ abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity() {
     protected open fun onViewClick() {
 
     }
+    public open fun loadingDialog(){
+        val testDialog =  newGenjiDialog {
+            //只需要将unLeak属性设置为true
+            unLeak = true
+        }.showOnWindow(supportFragmentManager)
+
+    }
+
 
 }

@@ -17,6 +17,11 @@ abstract class BaseFragment<VB : ViewBinding> : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         vb = getViewBinding(inflater,container)
+        initView(vb)
         return vb.root
+    }
+
+    protected open fun initView(vb: VB) {
+
     }
 }
