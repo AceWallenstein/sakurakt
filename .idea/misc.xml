@@ -5,8 +5,11 @@
       <map>
         <entry key="..\:/D/my_project/Sakura/app/src/main/res/layout/activity_login.xml" value="0.2128623188405797" />
         <entry key="..\:/D/my_project/Sakura/app/src/main/res/layout/activity_main.xml" value="0.2128623188405797" />
+        <entry key="..\:/D/my_project/Sakura/app/src/main/res/layout/fragment_calendar.xml" value="0.18704710144927536" />
         <entry key="..\:/D/my_project/Sakura/app/src/main/res/layout/fragment_form.xml" value="0.18704710144927536" />
         <entry key="..\:/D/my_project/Sakura/app/src/main/res/layout/fragment_home.xml" value="0.2128623188405797" />
+        <entry key="..\:/D/my_project/Sakura/app/src/main/res/layout/fragment_state.xml" value="0.18704710144927536" />
+        <entry key="..\:/D/my_project/Sakura/app/src/main/res/layout/item_days.xml" value="0.18704710144927536" />
       </map>
     </option>
   </component>

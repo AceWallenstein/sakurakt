@@ -4,6 +4,7 @@ import android.content.Context
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewbinding.ViewBinding
+import com.ly.genjidialog.GenjiDialog
 import com.ly.genjidialog.extensions.newGenjiDialog
 
 abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity() {
@@ -11,6 +12,8 @@ abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity() {
     protected val vb: VB by lazy { getViewBinding() }
 
     abstract fun getViewBinding(): VB
+
+    private var loading: GenjiDialog? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,13 +35,19 @@ abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity() {
     protected open fun onViewClick() {
 
     }
-    public open fun loadingDialog(){
-        val testDialog =  newGenjiDialog {
+
+    public open fun showProgress() {
+        loading?.showOnWindow(supportFragmentManager) ?: newGenjiDialog {
             //只需要将unLeak属性设置为true
 //            layoutId = R.layout.dialog_mask
             unLeak = true
-        }.showOnWindow(supportFragmentManager)
+        }.also { loading = it }.showOnWindow(supportFragmentManager)
 
+    }
+
+    public open fun closeProgress()
+    {
+        loading?.dismiss()
     }
 
 

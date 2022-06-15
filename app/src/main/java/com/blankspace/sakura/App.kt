@@ -1,6 +1,7 @@
 package com.blankspace.sakura
 
 import android.app.Application
+import com.blankspace.sakura.common.utils.CoilHelper
 
 
 class App : Application() {
@@ -12,6 +13,7 @@ class App : Application() {
     override fun onCreate() {
         super.onCreate()
         instance = this
+        CoilHelper.init(this)
 
     }
 
