@@ -24,4 +24,14 @@ abstract class BaseFragment<VB : ViewBinding> : Fragment() {
     protected open fun initView(vb: VB) {
 
     }
+
+    override fun onStart() {
+        super.onStart()
+        initData()
+    }
+
+    protected open fun initData() {
+
+    }
+
 }

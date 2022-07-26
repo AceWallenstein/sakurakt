@@ -8,7 +8,7 @@ import com.blankspace.sakura.databinding.ItemDaysBinding
 class DayAdapter : RecyclerView.Adapter<DayAdapter.VH>() {
     private var mDatas: MutableList<Int>? = null
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VH =
-        VH(ItemDaysBinding.inflate(LayoutInflater.from(parent.context)))
+        VH(ItemDaysBinding.inflate(LayoutInflater.from(parent.context),parent,false))
 
     public fun setData(datas: MutableList<Int>)
     {

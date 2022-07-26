@@ -12,6 +12,7 @@ object MoshiHelper {
 
     /**json解析moshi对象**/
     val moshi: Moshi = Moshi.Builder()
+        .add(DataToStringAdapter())
         .addLast(KotlinJsonAdapterFactory())
         .build()
 

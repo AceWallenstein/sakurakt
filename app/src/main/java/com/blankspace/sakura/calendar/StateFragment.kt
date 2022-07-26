@@ -14,16 +14,16 @@ class StateFragment : Fragment(R.layout.fragment_state) {
     lateinit var textView: TextView
     lateinit var add: Button
     lateinit var reduce: Button
-    private val viewModel: StateFlowViewModel by lazy { StateFlowViewModel() }
+    private val viewModel: StateFlowViewModel by lazy(LazyThreadSafetyMode.NONE) { StateFlowViewModel() }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         textView = view.findViewById<TextView>(R.id.textView)
         add = view.findViewById<Button>(R.id.add)
         reduce = view.findViewById<Button>(R.id.reduce)
         lifecycleScope.launch{
-            viewModel.stateFlow.collect({
+            viewModel.stateFlow.observe(viewLifecycleOwner){
                 textView.text = "$it"
-            })
+            }
         }
 
         onClick(add,reduce){

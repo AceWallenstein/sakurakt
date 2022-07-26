@@ -2,25 +2,44 @@
 <layout>
 
 
-<com.blankspace.sakura.widget.MyDragRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/drag_ll"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white"
-    android:orientation="vertical">
+    <com.blankspace.sakura.widget.MyDragRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/drag_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
 
 
-    <ImageView
-        android:id="@+id/iv_drag"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="60dp"
-        android:elevation="5dp"
-        android:src="@drawable/ic_question" />
+        <com.blankspace.sakura.widget.ViewPager2Container
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-</com.blankspace.sakura.widget.MyDragRelativeLayout>
+            <com.blankspace.sakura.widget.MyTabLayout
+                android:id="@+id/tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:tabRippleColor="@android:color/transparent"
+                app:tabIndicatorHeight="0dp"
+                app:tabMode="scrollable" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/tab_layout" />
+        </com.blankspace.sakura.widget.ViewPager2Container>
+
+        <ImageView
+            android:id="@+id/iv_drag"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="60dp"
+            android:elevation="5dp"
+            android:src="@drawable/ic_question" />
+
+    </com.blankspace.sakura.widget.MyDragRelativeLayout>
 </layout>

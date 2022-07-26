@@ -2,4 +2,7 @@
     <string name="app_name">Sakura</string>
     <string name="network_request_failed">网络请求失败</string>
     <string name="api_data_parse_error">数据解析失败</string>
+    <string name="network_not_available">网络出问题了</string>
+    <string name="reload">重新加载</string>
+    <string name="shoot">shoot</string>
 </resources>
