@@ -7,7 +7,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.blankspace.sakura.adapter.FragmentTabAdapter
 import com.blankspace.sakura.base.BaseActivity
-import com.blankspace.sakura.calendar.CalendarFragment
+import com.blankspace.sakura.book.BookFragment
 import com.blankspace.sakura.calendar.StateFragment
 import com.blankspace.sakura.common.utils.NavigationUtil
 import com.blankspace.sakura.databinding.ActivityMainBinding
@@ -58,7 +58,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     private fun initFragments() {
         fragments.add(HomeFragment())
         fragments.add(FormFragment())
-        fragments.add(CalendarFragment())
+        fragments.add(BookFragment())
         fragments.add(StateFragment())
         tabAdapter = FragmentTabAdapter(this, fragments, R.id.fl_layout)
     }

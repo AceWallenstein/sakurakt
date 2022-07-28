@@ -4,8 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/D/my_project/Sakura/app/src/main/res/drawable-xxhdpi/ic_more_vert_black_24dp.xml" value="0.1305" />
+        <entry key="..\:/D/my_project/Sakura/app/src/main/res/drawable/check_dark.xml" value="0.1305" />
         <entry key="..\:/D/my_project/Sakura/app/src/main/res/drawable/ic_arrow_back_black_24dp.xml" value="0.1305" />
         <entry key="..\:/D/my_project/Sakura/app/src/main/res/drawable/ic_snow_back_24.xml" value="0.1305" />
+        <entry key="..\:/D/my_project/Sakura/app/src/main/res/drawable/list_add_dark.xml" value="0.121" />
+        <entry key="..\:/D/my_project/Sakura/app/src/main/res/drawable/open_dark.xml" value="0.1305" />
         <entry key="..\:/D/my_project/Sakura/app/src/main/res/drawable/shape_bg_btn.xml" value="0.1305" />
         <entry key="..\:/D/my_project/Sakura/app/src/main/res/drawable/tablayout_item.xml" value="0.1305" />
         <entry key="..\:/D/my_project/Sakura/app/src/main/res/drawable/tablayout_item_indicator.xml" value="0.1305" />
@@ -17,17 +20,23 @@
         <entry key="..\:/D/my_project/Sakura/app/src/main/res/layout/activity_game.xml" value="0.18704710144927536" />
         <entry key="..\:/D/my_project/Sakura/app/src/main/res/layout/activity_login.xml" value="0.2128623188405797" />
         <entry key="..\:/D/my_project/Sakura/app/src/main/res/layout/activity_main.xml" value="0.2128623188405797" />
+        <entry key="..\:/D/my_project/Sakura/app/src/main/res/layout/activity_scan_book.xml" value="0.18704710144927536" />
         <entry key="..\:/D/my_project/Sakura/app/src/main/res/layout/fragment_book.xml" value="0.18704710144927536" />
         <entry key="..\:/D/my_project/Sakura/app/src/main/res/layout/fragment_calendar.xml" value="0.18704710144927536" />
         <entry key="..\:/D/my_project/Sakura/app/src/main/res/layout/fragment_form.xml" value="0.18704710144927536" />
         <entry key="..\:/D/my_project/Sakura/app/src/main/res/layout/fragment_home.xml" value="0.2128623188405797" />
         <entry key="..\:/D/my_project/Sakura/app/src/main/res/layout/fragment_one.xml" value="0.18704710144927536" />
+        <entry key="..\:/D/my_project/Sakura/app/src/main/res/layout/fragment_scanner.xml" value="0.18704710144927536" />
         <entry key="..\:/D/my_project/Sakura/app/src/main/res/layout/fragment_state.xml" value="0.18704710144927536" />
+        <entry key="..\:/D/my_project/Sakura/app/src/main/res/layout/fragment_web_book.xml" value="0.18704710144927536" />
         <entry key="..\:/D/my_project/Sakura/app/src/main/res/layout/include_reload.xml" value="0.18704710144927536" />
         <entry key="..\:/D/my_project/Sakura/app/src/main/res/layout/item_book.xml" value="0.18704710144927536" />
         <entry key="..\:/D/my_project/Sakura/app/src/main/res/layout/item_days.xml" value="0.18704710144927536" />
         <entry key="..\:/D/my_project/Sakura/app/src/main/res/layout/item_pic.xml" value="0.18704710144927536" />
+        <entry key="..\:/D/my_project/Sakura/app/src/main/res/layout/item_scanner.xml" value="0.10989583333333333" />
         <entry key="..\:/D/my_project/Sakura/app/src/main/res/layout/tablayout_item.xml" value="0.6792763157894737" />
+        <entry key="..\:/D/my_project/Sakura/app/src/main/res/menu/book_list.xml" value="0.25" />
+        <entry key="..\:/D/my_project/Sakura/app/src/main/res/menu/scanner.xml" value="0.25" />
       </map>
     </option>
   </component>
