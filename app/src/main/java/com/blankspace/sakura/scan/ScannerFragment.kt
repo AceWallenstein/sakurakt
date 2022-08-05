@@ -101,11 +101,22 @@ class ScannerFragment : BaseFragment<FragmentScannerBinding>() {
     private val pickFileCode = 32767
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == R.id.menu_scanner_open) {
-            val intent = Intent(Intent.ACTION_PICK).apply {
-                type = "text/plain"
-                action = Intent.ACTION_GET_CONTENT
+            lifecycleScope.launch {
+                val result = permission(Manifest.permission.READ_EXTERNAL_STORAGE)
+                if(result){
+                    viewModel.setHasPermission(true)
+                    val intent = Intent(Intent.ACTION_PICK).apply {
+                        type = "text/plain"
+                        action = Intent.ACTION_GET_CONTENT
+                    }
+                    startActivityForResult(intent, pickFileCode)
+                }else{
+                    viewModel.setHasPermission(false)
+                    toast(requireContext(),"权限拒绝")
+                }
             }
-            startActivityForResult(intent, pickFileCode)
+
+
             return true
         }
         return super.onOptionsItemSelected(item)

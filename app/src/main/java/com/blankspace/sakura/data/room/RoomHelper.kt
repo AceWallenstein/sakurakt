@@ -1,7 +1,9 @@
 package com.blankspace.sakura.data.room
 
+import androidx.paging.PagingSource
 import androidx.room.Room
 import com.blankspace.sakura.App
+import com.blankspace.sakura.bean.Book
 import com.blankspace.sakura.bean.Lesson
 
 /**
@@ -14,12 +16,16 @@ object RoomHelper {
     }
 
     private val lessonDao by lazy { appDatabase.lessonDao() }
+    private val bookDao by lazy { appDatabase.getBookDao() }
 
     suspend fun queryAllLessons():List<Lesson>{
         return lessonDao.getAll()
     }
     suspend fun deleteLesson(lesson: Lesson){
         lessonDao.delete(lesson)
+    }
+     fun queryAllBooks(): PagingSource<Int, Book> {
+        return bookDao.getAllBookInPage()
     }
 
 //    suspend fun queryAllReadHistory(): List<Lesson> {

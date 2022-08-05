@@ -5,12 +5,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.blankspace.sakura.bean.Lesson
-import com.blankspace.sakura.databinding.ItemBookBinding
+import com.blankspace.sakura.databinding.ItemWebBookBinding
 
 class IndexAdapter(listener: ((View, Lesson, Int) -> Unit)? = null) : BaseAdapter<Lesson, IndexAdapter.VH>(listener) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VH {
-        return VH(ItemBookBinding.inflate(LayoutInflater.from(parent.context),parent,false))
+        return VH(ItemWebBookBinding.inflate(LayoutInflater.from(parent.context),parent,false))
     }
 
     override fun onBindViewHolder(holder: VH, position: Int) {
@@ -23,7 +23,7 @@ class IndexAdapter(listener: ((View, Lesson, Int) -> Unit)? = null) : BaseAdapte
             }
         }
     }
-    class VH(val binding: ItemBookBinding):RecyclerView.ViewHolder(binding.root){
+    class VH(val binding: ItemWebBookBinding):RecyclerView.ViewHolder(binding.root){
         fun bind(){
 
         }

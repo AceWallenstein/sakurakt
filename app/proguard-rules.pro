@@ -20,3 +20,30 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 -keep public class com.ly.genjidialog.GenjiDialog { *; }
+-keep public class * implements com.bumptech.glide.module.GlideModule
+-keep class * extends com.bumptech.glide.module.AppGlideModule {
+ <init>(...);
+}
+-keep public enum com.bumptech.glide.load.ImageHeaderParser$** {
+  **[] $VALUES;
+  public *;
+}
+-keep class com.bumptech.glide.load.data.ParcelFileDescriptorRewinder$InternalRewinder {
+  *** rewind();
+}
+
+#agentWeb
+-dontwarn com.just.agentweb.**
+-keep class com.just.agentweb.** {*;}
+
+-keep class com.just.agentweb.** {
+    *;
+}
+-dontwarn com.just.agentweb.**
+
+-keepclassmembers class com.just.agentweb.sample.common.AndroidInterface{ *; }
+
+
+# for DexGuard only
+#-keepresourcexmlelements manifest/application/meta-data@value=GlideModule
+

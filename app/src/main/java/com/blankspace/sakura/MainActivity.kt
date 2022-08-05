@@ -7,10 +7,10 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.blankspace.sakura.adapter.FragmentTabAdapter
 import com.blankspace.sakura.base.BaseActivity
-import com.blankspace.sakura.book.BookFragment
 import com.blankspace.sakura.calendar.StateFragment
 import com.blankspace.sakura.common.utils.NavigationUtil
 import com.blankspace.sakura.databinding.ActivityMainBinding
+import com.blankspace.sakura.drag.TimeFragment
 import com.blankspace.sakura.ext.onClick
 import com.blankspace.sakura.ext.textColor
 import com.blankspace.sakura.form.FormFragment
@@ -58,7 +58,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     private fun initFragments() {
         fragments.add(HomeFragment())
         fragments.add(FormFragment())
-        fragments.add(BookFragment())
+        fragments.add(TimeFragment())
         fragments.add(StateFragment())
         tabAdapter = FragmentTabAdapter(this, fragments, R.id.fl_layout)
     }
