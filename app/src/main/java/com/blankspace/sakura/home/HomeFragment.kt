@@ -9,6 +9,7 @@ import coil.transform.CircleCropTransformation
 import com.blankspace.sakura.MainActivity
 import com.blankspace.sakura.base.BaseFragment
 import com.blankspace.sakura.databinding.FragmentHomeBinding
+import com.blankspace.sakura.download.DownloadActivity
 import com.blankspace.sakura.ext.onClick
 import com.blankspace.sakura.net.RetrofitClient
 import kotlinx.coroutines.CoroutineScope
@@ -29,7 +30,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
                 when (it) {
                     bt1 -> {
 //                       getArticle(1)
-                        startActivity(Intent(activity,ChartActivity::class.java))
+                        startActivity(Intent(activity,DownloadActivity::class.java))
                     }
                     bt2 -> {
                         image.load("https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg3.yimasm.com%2Fpic%2F2021%2F04%2F17%2F30af71151cb680c9b9d05035be445922.jpg&refer=http%3A%2F%2Fimg3.yimasm.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1653807025&t=2eded8b88d1de899563b1666c346bda1") {

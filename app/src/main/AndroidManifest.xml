@@ -18,6 +18,11 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
+
+
+        </activity>
+        <activity android:name=".login.LoginActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,14 +30,11 @@
             </intent-filter>
 
         </activity>
-        <activity android:name=".login.LoginActivity"
-            android:exported="true">
-
-        </activity>
         <activity android:name=".book.WebBookActivity" />
         <activity android:name=".form.DetailActivity" />
         <activity android:name=".book.ScanBookActivity" />
         <activity android:name=".home.ChartActivity" />
+        <activity android:name=".download.DownloadActivity" />
     </application>
 
 </manifest>

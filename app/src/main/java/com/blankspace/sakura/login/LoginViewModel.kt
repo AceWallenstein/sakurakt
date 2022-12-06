@@ -13,6 +13,9 @@ class LoginViewModel : BaseViewModel() {
         val map = mapOf("username" to username, "password" to password)
         launch({
             val login = RetrofitClient.apiService.login(map).apiData()
+            _login_state.value = true
+        }, error = {
+            _login_state.value = true
         })
     }
 

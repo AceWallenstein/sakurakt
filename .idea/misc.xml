@@ -30,6 +30,7 @@
         <entry key="..\:/D/my_project/Sakura/app/src/main/res/layout/fragment_one.xml" value="0.18704710144927536" />
         <entry key="..\:/D/my_project/Sakura/app/src/main/res/layout/fragment_scanner.xml" value="0.18704710144927536" />
         <entry key="..\:/D/my_project/Sakura/app/src/main/res/layout/fragment_state.xml" value="0.18704710144927536" />
+        <entry key="..\:/D/my_project/Sakura/app/src/main/res/layout/fragment_test.xml" value="0.25364583333333335" />
         <entry key="..\:/D/my_project/Sakura/app/src/main/res/layout/fragment_time.xml" value="0.23369565217391305" />
         <entry key="..\:/D/my_project/Sakura/app/src/main/res/layout/fragment_web_book.xml" value="0.18704710144927536" />
         <entry key="..\:/D/my_project/Sakura/app/src/main/res/layout/include_reload.xml" value="0.18704710144927536" />
@@ -45,7 +46,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

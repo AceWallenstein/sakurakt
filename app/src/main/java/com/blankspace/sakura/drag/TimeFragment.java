@@ -13,6 +13,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.blankspace.sakura.R;
 
@@ -21,6 +22,7 @@ public class TimeFragment extends Fragment implements View.OnClickListener {
     private TextView textView;
     private Button plus;
     private Button minus;
+    private RecyclerView recyclerView;
 
     @Nullable
     @Override
@@ -29,6 +31,7 @@ public class TimeFragment extends Fragment implements View.OnClickListener {
         textView = view.findViewById(R.id.text_view);
         plus = view.findViewById(R.id.plus);
         minus = view.findViewById(R.id.minus);
+        recyclerView = view.findViewById(R.id.recycler_view);
         return view;
 
     }
@@ -42,6 +45,7 @@ public class TimeFragment extends Fragment implements View.OnClickListener {
 
     private void start() {
         mCalHandler.post(mTicker);
+
 
     }
 
