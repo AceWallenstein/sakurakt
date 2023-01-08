@@ -6,10 +6,10 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.converter.scalars.ScalarsConverterFactory
+import retrofit2.create
 import java.util.concurrent.TimeUnit
 
 object RetrofitClient {
-
 
 
     /**log**/
@@ -37,4 +37,13 @@ object RetrofitClient {
 
     /**ApiService*/
     val apiService: ApiService = retrofit.create(ApiService::class.java)
+
+    val bookApiService = Retrofit.Builder()
+        .client(okHttpClient())
+        .baseUrl(BookApiService.BASE_URL)
+        .addConverterFactory(ScalarsConverterFactory.create())
+        .addConverterFactory(MoshiConverterFactory.create(MoshiHelper.moshi))
+        .build().create<BookApiService>()
+
+
 }

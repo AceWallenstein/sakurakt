@@ -8,10 +8,10 @@ import retrofit2.http.POST
 import retrofit2.http.Path
 import retrofit2.http.QueryMap
 
-interface ApiService {
+interface BookApiService {
 
     companion object {
-        const val BASE_URL = "https://wanandroid.com/"
+         var BASE_URL = "https://w.linovelib.com/"
     }
 
     @POST("user/login")
@@ -25,7 +25,5 @@ interface ApiService {
     @GET("article/list/{page}/json")
     suspend fun getLesson(@Path("page")page:Int,@QueryMap map: Map<String, @JvmSuppressWildcards Any>):BaseResult<Pagination<Lesson>>
 
-    @GET("")
-    suspend fun getHomePage():String
 
 }
