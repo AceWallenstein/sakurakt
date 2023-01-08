@@ -6,8 +6,7 @@ import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.blankspace.sakura.adapter.FragmentTabAdapter
-import com.blankspace.sakura.base.BaseActivity
-import com.blankspace.sakura.calendar.TestFragment
+import com.blankspace.sakura.base.BaseBindingActivity
 import com.blankspace.sakura.common.utils.NavigationUtil
 import com.blankspace.sakura.databinding.ActivityMainBinding
 import com.blankspace.sakura.drag.TimeFragment
@@ -15,9 +14,10 @@ import com.blankspace.sakura.ext.onClick
 import com.blankspace.sakura.ext.textColor
 import com.blankspace.sakura.form.FormFragment
 import com.blankspace.sakura.home.HomeFragment
+import com.blankspace.sakura.title.TitleFragment
 
 
-class MainActivity : BaseActivity<ActivityMainBinding>() {
+class MainActivity : BaseBindingActivity<ActivityMainBinding>() {
     private val fragments: MutableList<Fragment> = arrayListOf()
     private val tabText = arrayOf("首页", "课程", "论坛", "我的")
 
@@ -46,8 +46,13 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
     private lateinit var tabAdapter: FragmentTabAdapter
 
+
     override fun getViewBinding(): ActivityMainBinding = ActivityMainBinding.inflate(layoutInflater)
     override fun initView() {
+        showLoadingView()
+        vb.root.postDelayed({
+            showContentView()
+        }, 1000)
         initFragments()
         initTab()
         selectTab(0)
@@ -59,7 +64,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         fragments.add(HomeFragment())
         fragments.add(FormFragment())
         fragments.add(TimeFragment())
-        fragments.add(TestFragment())
+        fragments.add(TitleFragment())
         tabAdapter = FragmentTabAdapter(this, fragments, R.id.fl_layout)
     }
 

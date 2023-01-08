@@ -2,6 +2,8 @@ package com.blankspace.sakura
 
 import android.app.Application
 import com.blankspace.sakura.common.utils.CoilHelper
+import com.blankspace.sakura.widget.LoadingViewDelegate
+import com.dylanc.loadingstateview.LoadingStateView
 
 
 class App : Application() {
@@ -14,6 +16,9 @@ class App : Application() {
         super.onCreate()
         instance = this
         CoilHelper.init(this)
+        LoadingStateView.setViewDelegatePool {
+            register(LoadingViewDelegate())
+        }
 
     }
 

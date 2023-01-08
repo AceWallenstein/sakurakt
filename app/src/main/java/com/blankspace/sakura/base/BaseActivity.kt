@@ -9,7 +9,7 @@ import com.ly.genjidialog.extensions.newGenjiDialog
 
 abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity() {
     protected lateinit var mContext: Context
-    protected val vb: VB by lazy { getViewBinding() }
+    protected lateinit var vb: VB
 
     abstract fun getViewBinding(): VB
 
@@ -18,10 +18,20 @@ abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mContext = this
-        setContentView(vb.root)
+        setContentViewWithBinding()
         initView()
         initData()
         onViewClick()
+    }
+
+    protected open fun setContentViewWithBinding()
+    {
+        vb = getViewBinding()
+        setContentView(vb.root)
+    }
+
+    protected open fun initToolBar() {
+
     }
 
     protected open fun initView() {
@@ -45,8 +55,7 @@ abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity() {
 
     }
 
-    public open fun closeProgress()
-    {
+    public open fun closeProgress() {
         loading?.dismiss()
     }
 
