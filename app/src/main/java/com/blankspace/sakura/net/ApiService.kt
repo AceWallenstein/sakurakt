@@ -25,7 +25,5 @@ interface ApiService {
     @GET("article/list/{page}/json")
     suspend fun getLesson(@Path("page")page:Int,@QueryMap map: Map<String, @JvmSuppressWildcards Any>):BaseResult<Pagination<Lesson>>
 
-    @GET("")
-    suspend fun getHomePage():String
 
 }

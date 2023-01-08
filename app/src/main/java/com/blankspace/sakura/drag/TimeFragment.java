@@ -1,5 +1,6 @@
 package com.blankspace.sakura.drag;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -16,6 +17,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.blankspace.sakura.R;
+import com.blankspace.sakura.book.blibook.BliBookActivity;
 
 public class TimeFragment extends Fragment implements View.OnClickListener {
 
@@ -71,7 +73,9 @@ public class TimeFragment extends Fragment implements View.OnClickListener {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.plus:
-                start();
+//                start();
+
+                startActivity(new Intent(getActivity(), BliBookActivity.class));
                 break;
             case R.id.minus:
                 pause();
