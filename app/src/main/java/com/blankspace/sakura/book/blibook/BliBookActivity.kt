@@ -14,6 +14,8 @@ class BliBookActivity : BaseActivity<ActivityBlibookBinding>() {
         ActivityBlibookBinding.inflate(layoutInflater)
 
     override fun initView() {
+        val list = mutableListOf<String>()
+        list.add("adsf")
         initNavigation()
         with(vb){
             tvHtml.movementMethod = ScrollingMovementMethod.getInstance()
