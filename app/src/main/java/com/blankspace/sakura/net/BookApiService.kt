@@ -3,10 +3,7 @@ package com.blankspace.sakura.net
 import com.blankspace.sakura.bean.Course
 import com.blankspace.sakura.bean.Lesson
 import com.blankspace.sakura.bean.Pagination
-import retrofit2.http.GET
-import retrofit2.http.POST
-import retrofit2.http.Path
-import retrofit2.http.QueryMap
+import retrofit2.http.*
 
 interface BookApiService {
 
@@ -27,6 +24,9 @@ interface BookApiService {
 
     @GET("/")
     suspend fun getHomePage():String
+
+    @GET
+    suspend fun parseCss(@Url url:String):String
 
 
 }

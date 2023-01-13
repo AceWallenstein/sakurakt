@@ -4,7 +4,9 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.blankspace.sakura.base.BaseViewModel
 import com.blankspace.sakura.book.blibook.utils.Parser
+import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class BliViewModel : BaseViewModel() {
@@ -19,7 +21,9 @@ class BliViewModel : BaseViewModel() {
     fun launchHomePage() {
         launch({
             val homePage = bliRepository.getHomePage()
-            Parser.parse(homePage)
+            CoroutineScope(Dispatchers.IO).launch {
+                Parser.parse(homePage)
+            }
             withContext(Dispatchers.Main) {
                 _content.value = homePage
             }

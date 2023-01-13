@@ -20,7 +20,8 @@ object RetrofitClient {
     /**OkhttpClient*/
     private fun okHttpClient(): OkHttpClient {
         val builder = OkHttpClient.Builder()
-            .callTimeout(10, TimeUnit.SECONDS)
+            .readTimeout(10,TimeUnit.SECONDS)
+            .connectTimeout(10,TimeUnit.SECONDS)
         if (BuildConfig.DEBUG) {
             builder.addNetworkInterceptor(logInterceptor)
         }
