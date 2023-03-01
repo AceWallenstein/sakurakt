@@ -28,5 +28,12 @@ interface BookApiService {
     @GET
     suspend fun parseCss(@Url url:String):String
 
+    @GET
+    suspend fun getBook(@Url url:String):String
+
+    @GET
+    suspend fun getBookIndex(@Url url:String):String
+
+
 
 }

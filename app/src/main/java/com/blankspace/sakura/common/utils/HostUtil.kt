@@ -159,5 +159,6 @@ fun whiteHostList() = arrayOf(
     "www.aliyun.com",
     "promotion.aliyun.com",
     "fabiomsr.github.io",
-    "https://m.readnovel.com"
+    "https://m.readnovel.com",
+    "w.linovelib.com"
 )

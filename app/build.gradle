@@ -52,6 +52,7 @@ dependencies {
     def agentWebVersion ='v4.1.9-androidx'
     def room_version = '2.4.2'
     def paging_version = '3.1.1'
+    def swiperefreshlayout_version = '1.1.0'
 
 
     implementation 'androidx.core:core-ktx:1.7.0'
@@ -95,6 +96,8 @@ dependencies {
 
     implementation "com.github.bumptech.glide:glide:$glide_version"
     annotationProcessor "com.github.bumptech.glide:compiler:$glide_version"
+    implementation "jp.wasabeef:glide-transformations:4.3.0"
+
     implementation "com.github.Justson.AgentWeb:agentweb-core:$agentWebVersion" // (必选)
 
     implementation("androidx.room:room-runtime:$room_version")
@@ -109,11 +112,16 @@ dependencies {
 
     implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
 
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:$swiperefreshlayout_version"
+
+
     //LoadingStateView
     implementation 'com.github.DylanCaiCoding.LoadingStateView:loadingstateview-ktx:4.0.2'
     implementation 'com.github.DylanCaiCoding.ViewBindingKTX:viewbinding-base:2.1.0'
     def jsoup_version = '1.15.3'
     implementation "org.jsoup:jsoup:$jsoup_version"
+
+    
 
 
 

@@ -1,3 +1,3 @@
 package com.blankspace.sakura.book.blibook.model
 
- class Icon(val name:String)
+data class Icon(val name:String,var url:String?="",var pic_url:String?="")

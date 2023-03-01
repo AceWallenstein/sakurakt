@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewAnimationUtils
 import android.view.ViewGroup
 import android.widget.ImageView
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.blankspace.sakura.R
 import com.blankspace.sakura.adapter.BaseAdapter
@@ -34,6 +35,7 @@ public class LotteryActivity : BaseActivity<ActivityLotteryBinding>() {
         val recyclerView = vb.recyclerView;
         with(recyclerView) {
             layoutManager = LoopLayoutManager()
+            val l = LinearLayoutManager(mContext)
             adapter =
                 MyAdapter().also { it.setData(arrayListOf("1", "2", "3", "4", "5", "7", "8")) }
         }
