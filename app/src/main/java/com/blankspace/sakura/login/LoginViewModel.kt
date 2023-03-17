@@ -4,7 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import com.blankspace.sakura.base.BaseViewModel
 import com.blankspace.sakura.net.RetrofitClient
 
-class LoginViewModel : BaseViewModel() {
+class LoginViewModel(username: String) : BaseViewModel() {
     private var _login_state = MutableLiveData<Boolean>()
     val login_state
         get() = _login_state

@@ -10,7 +10,9 @@ import com.blankspace.sakura.databinding.ActivityLoginBinding
 import com.blankspace.sakura.ext.onClick
 
 class LoginActivity : BaseActivity<ActivityLoginBinding>() {
-    val vm: LoginViewModel by viewModels()
+    val vm: LoginViewModel by viewModels{
+        LoginVideoModelFactory("hello")
+    }
 
     override fun getViewBinding() = ActivityLoginBinding.inflate(layoutInflater)
 

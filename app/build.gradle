@@ -3,6 +3,8 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-parcelize'
     id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+
 }
 
 android {
@@ -120,6 +122,18 @@ dependencies {
     implementation 'com.github.DylanCaiCoding.ViewBindingKTX:viewbinding-base:2.1.0'
     def jsoup_version = '1.15.3'
     implementation "org.jsoup:jsoup:$jsoup_version"
+
+    //Dagger - Hilt
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
+
+    implementation 'com.github.LetMeOff:SimpleDownload:v1.0.0'
+
+
+//    implementation "androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03"
+//    kapt "androidx.hilt:hilt-compiler:1.0.0"
+
+
 
     
 

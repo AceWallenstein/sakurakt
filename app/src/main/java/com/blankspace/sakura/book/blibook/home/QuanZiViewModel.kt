@@ -39,7 +39,7 @@ class QuanZiViewModel : BaseViewModel() {
             val title = e.select("h4.book-title").text()
             val des = e.select("p.book-desc").text()
             val url = e.select("a.book-layout").attr("href")
-            val coverUrl = e.select("img.book-cover")[0].attr("data-original")
+            val coverUrl = e.select("img.book-cover")[0].attr("data-src")
             val author = e.select("span.book-author").text()
             mutableList.add(Book(url, title, des, coverUrl, author))
         }

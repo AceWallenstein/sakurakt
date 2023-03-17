@@ -208,7 +208,16 @@ class WebBookActivity : AppCompatActivity(R.layout.activity_detail) {
                 js.append("for (var i=0;i<adsbygoogle.length;i++){  if(adsbygoogle[i]){adsbygoogle[i].parentNode.removeChild(adsbygoogle[i])}}")
                 js.append("var ap_container = document.getElementsByClassName('google-auto-placed ap_container');")
                 js.append("for (var i=0;i<ap_container.length;i++){  if(ap_container[i]){ap_container[i].parentNode.removeChild(ap_container[i])}}")
-
+                js.append("var aswift_1_host = document.getElementById('volumes');\n" +
+                        "if(aswift_1_host){\n" +
+                        "for(var i=0;i<aswift_1_host.childNodes.length;i++){\n" +
+                        "aswift_1_host.removeChild(aswift_1_host.childNodes[i])\n" +
+                        "}\n" +
+                        "}")
+                js.append("var paras = document.getElementsByClassName('adsbygoogle adsbygoogle-noablate'); for(i=0;i<paras.length;i++){\n" +
+                        "    if (paras[i] != null)\n" +
+                        "    paras[i].parentNode.removeChild( paras[i]);\n" +
+                        "}")
 
             }
         }

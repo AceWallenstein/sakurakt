@@ -8,19 +8,21 @@ import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.blankspace.sakura.base.BaseActivity
 import com.blankspace.sakura.book.blibook.home.QuanZiFragment
+import com.blankspace.sakura.book.blibook.test.TestFragment
 import com.blankspace.sakura.book.blibook.utils.Parser
 import com.blankspace.sakura.databinding.ActivityBlibookBinding
 import com.blankspace.sakura.home.HomeFragment
 import com.bumptech.glide.Glide
 import com.google.android.material.bottomnavigation.BottomNavigationItemView
 import com.google.android.material.bottomnavigation.BottomNavigationMenuView
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class BliBookActivity : BaseActivity<ActivityBlibookBinding>() {
     private val TAG = "BliBookActivity"
     private val fragments = mutableListOf<Fragment>(
         QuanZiFragment(),
-        HomeFragment(),
+        TestFragment(),
         HomeFragment(),
         HomeFragment()
     )

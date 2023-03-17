@@ -11,7 +11,10 @@ import com.ly.genjidialog.GenjiDialog
 import com.ly.genjidialog.extensions.newGenjiDialog
 
 abstract class BaseFragment<VB : ViewBinding> : Fragment() {
-    protected lateinit var vb: VB
+    protected val vb: VB
+        get() = _vb!!
+
+    private var _vb: VB? = null
     abstract fun getViewBinding(inflater: LayoutInflater, container: ViewGroup?): VB
 
     override fun onCreateView(
@@ -19,7 +22,7 @@ abstract class BaseFragment<VB : ViewBinding> : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        vb = getViewBinding(inflater,container)
+        _vb = getViewBinding(inflater, container)
         initView(vb)
         return vb.root
     }
@@ -52,6 +55,12 @@ abstract class BaseFragment<VB : ViewBinding> : Fragment() {
 
     public open fun closeProgress() {
         loading?.dismiss()
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _vb = null
+
     }
 
 }

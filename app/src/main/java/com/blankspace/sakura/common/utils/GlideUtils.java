@@ -157,7 +157,6 @@ public class GlideUtils extends AppGlideModule {
                                             float radius) {
         RequestOptions options = RequestOptions.bitmapTransform(
                 new MultiTransformation<>(
-                        new CenterCrop(),
                         new RoundedCornersTransformation(SizeUtils.px2dp(context, radius), 0,
                                 RoundedCornersTransformation.CornerType.ALL)
                 ))
